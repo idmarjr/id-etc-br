@@ -1,0 +1,182 @@
+/******************************************************************************/
+/* General */
+/******************************************************************************/
+html {
+	background-color: rgba(#fff, 1);
+	animation: 60s htmlColors infinite;
+}
+
+body {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 10pt;
+	color: rgba(#fff, 1);
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.25) 100%);
+}
+
+a {
+	color: rgba(#fff, 1);
+	text-decoration: none;
+	transition: 0.2s ease-in all;
+	transition-delay: 0.3s;
+}
+
+h1,h2,h3,h4,h5,h6 {font-weight: 500;}
+
+strong {font-weight: 300;}
+
+/******************************************************************************/
+/* Utilite classes */
+/******************************************************************************/
+.hide {display: none!important;}
+
+.vhide {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+}
+
+/******************************************************************************/
+/* .wrapper */
+/******************************************************************************/
+.wrapper {
+	position: relative;
+	max-width: 1000px;
+	height: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+/******************************************************************************/
+/* .mainHeader */
+/******************************************************************************/
+.mainHeader {
+	position: relative;
+	height: 65vh;
+	padding: 20px 0;
+	background-color: #7db9e8;
+	animation: 60s mainHeaderColors infinite;
+}
+
+.author {
+	position: absolute;;
+	right: 20px;
+	bottom: 20px;
+}
+
+.mainHeader h1 {margin-bottom: 20px;}
+
+.mainHeader h1 > span {
+	display: block;
+	line-height: 0.8em;
+	letter-spacing: 0.02em;
+	text-align: right;
+	margin-bottom: 6px;
+}
+
+.mainHeader .name {
+	font-size: 4em;
+	font-weight: 700;
+}
+
+.mainHeader .surname {
+	font-size: 3.4em;
+	font-weight: 300;
+}
+
+.mainHeader .lastname {
+	font-size: 2.8em;
+	font-weight: 100;
+}
+
+.mainHeader strong {
+	display: block;
+	text-align: right;
+	font-size: 1.8em;
+	font-weight: 100;
+}
+
+.mainHeader strong a {
+	font-weight: 300;
+	text-decoration: underline;
+}
+
+/******************************************************************************/
+/* .content */
+/******************************************************************************/
+.content {position: relative;}
+
+/******************************************************************************/
+/* .social */
+/******************************************************************************/
+.social {padding: 20px;}
+
+/******************************************************************************/
+/* .socialLinks */
+/******************************************************************************/
+.socialLinks {
+	list-style: none;
+	text-align: right;
+}
+
+.socialLinks li {display: inline-block;}
+.socialLinks li:not(:last-child) {margin-right: 10px;}
+
+.socialLinks a {
+	display: block;
+	height: 40px;
+	width: 40px;
+	padding: 5px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	font-size: 2em;
+	text-align: center;
+}
+
+.socialLinks a:hover {
+	border-color: rgba(#fff, 0.5);
+	background-color: rgba(#fff, 0.1);
+}
+
+/******************************************************************************/
+/* Animation */
+/******************************************************************************/
+@keyframes mainHeaderColors {
+	000% {background-color: #4C49A2;}
+	025% {background-color: #35235D;}
+	050% {background-color: #A31A48;}
+	075% {background-color: #DB2464;}
+	100% {background-color: #4C49A2;}
+}
+
+@keyframes htmlColors {
+	000% {background-color: #DB2464;}
+	025% {background-color: #A31A48;}
+	050% {background-color: #4C49A2;}
+	075% {background-color: #35235D;}
+	100% {background-color: #DB2464;}
+}
+
+/******************************************************************************/
+/* Resolution > 768px */
+/******************************************************************************/
+@media only screen and (min-width: 769px) {
+
+	.mainHeader h1 {margin-bottom: 5px;}
+	.mainHeader h1 > span {display: inline;}
+
+	.mainHeader .name,
+	.mainHeader .surname,
+	.mainHeader .lastname {
+		font-size: 5em;
+		font-weight: 700;
+	}
+
+	.socialLinks li:not(:last-child) {margin-right: 30px;}
+
+//End @media only screen and (min-width: 769px)
+}
