@@ -61,15 +61,18 @@ strong {font-weight: 300;}
 	animation: 60s mainHeaderColors infinite;
 }
 
+/******************************************************************************/
+/* .author */
+/******************************************************************************/
 .author {
 	position: absolute;;
 	right: 20px;
 	bottom: 20px;
 }
 
-.mainHeader h1 {margin-bottom: 20px;}
+.author h1 {margin-bottom: 20px;}
 
-.mainHeader h1 > span {
+.author h1 > span {
 	display: block;
 	line-height: 0.8em;
 	letter-spacing: 0.02em;
@@ -77,29 +80,29 @@ strong {font-weight: 300;}
 	margin-bottom: 6px;
 }
 
-.mainHeader .name {
+.author .name {
 	font-size: 4em;
 	font-weight: 700;
 }
 
-.mainHeader .surname {
+.author .surname {
 	font-size: 3.4em;
 	font-weight: 300;
 }
 
-.mainHeader .lastname {
+.author .lastname {
 	font-size: 2.8em;
 	font-weight: 100;
 }
 
-.mainHeader strong {
+.author .role {
 	display: block;
 	text-align: right;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	font-weight: 100;
 }
 
-.mainHeader strong a {
+.author .role a {
 	font-weight: 300;
 	text-decoration: underline;
 }
@@ -112,7 +115,7 @@ strong {font-weight: 300;}
 /******************************************************************************/
 /* .social */
 /******************************************************************************/
-.social {padding: 20px;}
+.social {padding: 10px 20px;}
 
 /******************************************************************************/
 /* .socialLinks */
@@ -127,9 +130,9 @@ strong {font-weight: 300;}
 
 .socialLinks a {
 	display: block;
+	padding: 10px;
 	height: 40px;
 	width: 40px;
-	padding: 5px;
 	border: 1px solid transparent;
 	border-radius: 3px;
 	font-size: 2em;
@@ -207,17 +210,62 @@ strong {font-weight: 300;}
 /******************************************************************************/
 @media only screen and (min-width: 769px) {
 
-	.mainHeader h1 {margin-bottom: 5px;}
-	.mainHeader h1 > span {display: inline;}
+	.author h1 {margin-bottom: 10px;}
+	.author h1 > span {display: inline;}
+
+	.author .name,
+	.author .surname,
+	.author .lastname {
+		font-size: 5em;
+		font-weight: 900;
+	}
+
+	.author .role {font-size: 2.8em;}
+	.socialLinks li:not(:last-child) {margin-right: 30px;}
+
+	.socialLinks a {
+		font-size: 2.5em;
+		height: 57px;
+		width: 57px;
+	}
+
+//End @media only screen and (min-width: 769px)
+}
+
+/******************************************************************************/
+/* Resolution > 1024px */
+/******************************************************************************/
+@media only screen and (min-width: 1025px) {
+
+	.author {right: 40px;}
+	.author h1 {margin-bottom: 20px;}
 
 	.mainHeader .name,
 	.mainHeader .surname,
 	.mainHeader .lastname {
-		font-size: 5em;
-		font-weight: 700;
+		font-size: 8em;
 	}
 
-	.socialLinks li:not(:last-child) {margin-right: 30px;}
+	.author .role {font-size: 3.8em;}
+	.social {padding: 20px 40px;}
+
+	.socialLinks a {
+		font-size: 4em;
+		height: 75px;
+		width: 75px;
+	}
+
+//End @media only screen and (min-width: 769px)
+}
+
+/******************************************************************************/
+/* Resolution > 1500px */
+/******************************************************************************/
+@media only screen and (min-width: 1500px) {
+
+	.mainHeader .name,
+	.mainHeader .surname,
+	.mainHeader .lastname {font-size: 12em;}
 
 //End @media only screen and (min-width: 769px)
 }
