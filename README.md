@@ -16,6 +16,3 @@ This is the code from my personal website [id.etc.br](http://id.etc.br). Feel fr
 5. Have fun developing;
 
 Styles are in **sass/** folder and they will be compiled via `gulp` to a **css/** folder.
-
-## Important
-In case of you use this code as base to some project, PLEASE, **remove my Google Analytics code** from it!
