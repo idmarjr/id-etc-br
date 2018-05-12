@@ -134,9 +134,7 @@ strong {font-weight: 300;}
 
 .socialLinks a {
 	display: block;
-	padding: 10px;
-	height: 40px;
-	width: 40px;
+	padding: 8px 8px 5px 8px;
 	border: 1px solid transparent;
 	border-radius: 3px;
 	font-size: 2em;
@@ -225,13 +223,9 @@ strong {font-weight: 300;}
 	}
 
 	.author .role {font-size: 2.8em;}
-	.socialLinks li:not(:last-child) {margin-right: 30px;}
 
-	.socialLinks a {
-		font-size: 2.5em;
-		height: 57px;
-		width: 57px;
-	}
+	.socialLinks li:not(:last-child) {margin-right: 30px;}
+	.socialLinks a {font-size: 2.5em;}
 
 //End @media only screen and (min-width: 769px)
 }
@@ -254,9 +248,8 @@ strong {font-weight: 300;}
 	.social {padding: 20px 40px;}
 
 	.socialLinks a {
-		font-size: 4em;
-		height: 75px;
-		width: 75px;
+		font-size: 3em;
+		padding: 10px 12px 8px 12px;
 	}
 
 //End @media only screen and (min-width: 769px)
