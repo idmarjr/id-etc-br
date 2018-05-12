@@ -3,7 +3,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 html {
 	background-color: rgba(#fff, 1);
-	animation: 60s htmlColors infinite;
 }
 
 body {
@@ -117,7 +116,10 @@ strong {font-weight: 300;}
 ////////////////////////////////////////////////////////////////////////////////
 // .social
 ////////////////////////////////////////////////////////////////////////////////
-.social {padding: 10px 20px;}
+.social {
+	padding: 10px 20px;
+	animation: 60s socialColors infinite;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // .socialLinks
@@ -149,8 +151,8 @@ strong {font-weight: 300;}
 // .publications
 ////////////////////////////////////////////////////////////////////////////////
 .publications {
-	background-color: #A31A48;
-	text-align: right;;
+	text-align: right;
+	animation: 60s publicationlColors infinite;
 }
 
 .publications header {padding: 30px 20px;}
@@ -193,12 +195,20 @@ strong {font-weight: 300;}
 	100% {background-color: #4C49A2;}
 }
 
-@keyframes htmlColors {
+@keyframes socialColors {
 	000% {background-color: #DB2464;}
 	025% {background-color: #A31A48;}
-	050% {background-color: #4C49A2;}
-	075% {background-color: #35235D;}
+	050% {background-color: #35235D;}
+	075% {background-color: #4C49A2;}
 	100% {background-color: #DB2464;}
+}
+
+@keyframes publicationlColors {
+	000% {background-color: #A31A48;}
+	025% {background-color: #35235D;}
+	050% {background-color: #4C49A2;}
+	075% {background-color: #DB2464;}
+	100% {background-color: #A31A48;}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
