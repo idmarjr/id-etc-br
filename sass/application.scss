@@ -58,7 +58,7 @@ strong {font-weight: 300;}
 ////////////////////////////////////////////////////////////////////////////////
 .mainHeader {
 	position: relative;
-	height: 65vh;
+	height: calc(100vh - 65px);
 	padding: 20px 0;
 	animation: 60s mainHeaderColors infinite;
 }
@@ -149,7 +149,6 @@ strong {font-weight: 300;}
 // .publications
 ////////////////////////////////////////////////////////////////////////////////
 .publications {
-	border-top: 1px solid rgba(#fff, 0.5);
 	background-color: #A31A48;
 	text-align: right;;
 }
@@ -220,7 +219,7 @@ strong {font-weight: 300;}
 	.author .role {font-size: 2.8em;}
 
 	.socialLinks li:not(:last-child) {margin-right: 30px;}
-	.socialLinks a {font-size: 2.5em;}
+
 
 	.publicationList a {
 		transition-delay: 0.2s;
@@ -240,6 +239,8 @@ strong {font-weight: 300;}
 // Resolution > 1024px
 ////////////////////////////////////////////////////////////////////////////////
 @media only screen and (min-width: 1025px) {
+
+	.mainHeader {height: calc(100vh - 100px);}
 
 	.author {right: 40px;}
 	.author h1 {margin-bottom: 20px;}
