@@ -1,30 +1,35 @@
 ////////////////////////////////////////////////////////////////////////////////
+// Variables
+////////////////////////////////////////////////////////////////////////////////
+$primary-color: #C9293D;
+$secondary-color: #fff;
+
+////////////////////////////////////////////////////////////////////////////////
 // General
 ////////////////////////////////////////////////////////////////////////////////
 html {
-	background-color: rgba(#fff, 1);
+	background-color: rgba($secondary-color, 1);
 }
 
 body {
-	font-family: 'Alegreya Sans', sans-serif;
+	font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 	font-size: 10pt;
-	color: rgba(#fff, 1);
-	background-image: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.25) 100%
-	);
+	color: rgba($primary-color, 1);
+	background-color: rgba($secondary-color, 1)
 }
 
 a {
-	color: rgba(#fff, 1);
+	color: rgba($primary-color, 1);
 	text-decoration: none;
-	transition: 0.2s ease-in all;
 }
 
 h1,h2,h3,h4,h5,h6 {font-weight: 500;}
 strong {font-weight: 300;}
 
+main {
+	padding-top: 48vh;
+	padding-bottom: 32px;
+}
 ////////////////////////////////////////////////////////////////////////////////
 // Utilite classes
 ////////////////////////////////////////////////////////////////////////////////
@@ -46,9 +51,8 @@ strong {font-weight: 300;}
 ////////////////////////////////////////////////////////////////////////////////
 .wrapper {
 	position: relative;
-	max-width: 1000px;
-	height: 100%;
-	padding: 0 20px;
+	max-width: 1400px;
+	padding: 0 12px;
 	margin: 0 auto;
 }
 
@@ -56,29 +60,60 @@ strong {font-weight: 300;}
 // .mainHeader
 ////////////////////////////////////////////////////////////////////////////////
 .mainHeader {
+	display: flex;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	align-items: center;
+	height: 48vh;
+	background-size: cover;
+	background-color: #9f041b;
+	background-attachment: fixed;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%239f041b'/%3E%3Cstop offset='1' stop-color='%23af3a44'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// .mainContent
+////////////////////////////////////////////////////////////////////////////////
+.mainContent {
 	position: relative;
-	height: calc(100vh - 65px);
-	padding: 20px 0;
-	animation: 60s mainHeaderColors infinite;
+	background: #fff;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // .author
 ////////////////////////////////////////////////////////////////////////////////
 .author {
-	position: absolute;;
-	right: 20px;
-	bottom: 20px;
+	text-align: center;
 }
 
-.author h1 {margin-bottom: 20px;}
+.author h1 span,
+.author h2,
+.author a,
+.author .role {
+	color: rgba($secondary-color, 1);
+	transition: 0.5s ease-in-out font-size;
+	transition-delay: 0.6s;
+}
+
+.author h1 {
+	margin-bottom: 6px
+}
 
 .author h1 > span {
 	display: block;
+	margin-bottom: 12px;
 	line-height: 0.8em;
 	letter-spacing: 0.02em;
-	text-align: right;
-	margin-bottom: 6px;
+}
+
+.author h2:before {
+	content: "";
+	display: block;
+	width: 12%;
+	border-top: 1px solid rgba($secondary-color, 1);
+	margin: 24px auto;
+	text-align: center;
 }
 
 .author .name {
@@ -96,119 +131,121 @@ strong {font-weight: 300;}
 	font-weight: 100;
 }
 
+.author h2 {
+	font-size: 1.4em;
+	font-weight: 300;
+	margin-bottom: 8px;
+}
+
 .author .role {
 	display: block;
-	text-align: right;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: 100;
 }
 
-.author .role a {
-	font-weight: 300;
-	text-decoration: underline;
+////////////////////////////////////////////////////////////////////////////////
+// .sectionHeader
+////////////////////////////////////////////////////////////////////////////////
+.sectionHeader {
+	border-bottom: 1px solid rgba($primary-color, 1);
+	padding-top: 24px;
+	margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+	font-size: 2.4em;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	margin-bottom: 6px;
+	font-weight: 400;
+}
+
+.sectionHeader .note {
+	margin-bottom: 6px;
+	font-size: 1.2em;
+	font-weight: 200;
+	font-style: italic;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// .content
+// .articlesList
 ////////////////////////////////////////////////////////////////////////////////
-.content {position: relative;}
+.articlesList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	list-style: none;
+}
 
-////////////////////////////////////////////////////////////////////////////////
-// .social
-////////////////////////////////////////////////////////////////////////////////
-.social {
-	padding: 10px 20px;
-	animation: 60s socialColors infinite;
+.articlesList li {
+	display: flex;
+	flex-basis: 100%;
+	margin-bottom: 32px;
+	transition: 0.5s ease-in-out flex-basis;
+}
+
+.articlesList img {
+	display: block;
+	width: 100%;
+	margin-bottom: 6px;
+	filter: saturate(60%);
+	transition: 0.3s ease-in-out filter;
+}
+
+.articlesList a:hover img {
+	filter: saturate(100%);
+}
+
+.articlesList h3 {
+	font-weight: 300;
+	font-size: 1.4em;
+	line-height: 1.3em;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // .socialLinks
 ////////////////////////////////////////////////////////////////////////////////
 .socialLinks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	list-style: none;
-	text-align: right;
 }
 
-.socialLinks li {display: inline-block;}
-.socialLinks li:not(:last-child) {margin-right: 10px;}
+.socialLinks li {
+	flex-basis: calc(50% - 12px);
+	margin-bottom: 24px;
+}
 
 .socialLinks a {
-	display: block;
-	padding: 8px 8px 5px 8px;
-	border: 1px solid transparent;
-	border-radius: 3px;
-	font-size: 2em;
-	text-align: center;
-	transition-delay: 0.3s;
-}
-
-.socialLinks a:hover {
-	border-color: rgba(#fff, 0.5);
-	background-color: rgba(#fff, 0.1);
+	display: flex;
+	height: 90px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba($primary-color, 1);
+	border-radius: 1px;
+	font-size: 1.2em;
+	letter-spacing: 0.05em;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// .publications
+// Screen orientation: landscape
 ////////////////////////////////////////////////////////////////////////////////
-.publications {
-	text-align: right;
-	animation: 60s publicationlColors infinite;
-}
+@media only screen and (orientation: landscape) {
 
-.publications header {padding: 30px 20px;}
+	.wrapper {
+		padding: 0 24px;
+	}
 
-.publications header h2 {
-	font-size: 2em;
-	margin-bottom: 5px;
-}
+	main {
+		padding-top: 80vh;
+	}
 
-.publications header p {
-	font-size: 1.4em;
-	font-weight: 100;
-}
+	.mainHeader {
+		height: 80vh;
+	}
 
-////////////////////////////////////////////////////////////////////////////////
-// .publicationList
-////////////////////////////////////////////////////////////////////////////////
-.publicationList {list-style: none;}
-.publicationList li {overflow: hidden;}
-
-.publicationList li:nth-child(even) a {background-color: rgba(#fff, 0.1);}
-.publicationList li:nth-child(odd) a {background-color: rgba(#fff, 0.2);}
-
-.publicationList a {
-	display: block;
-	overflow: hidden;
-	font-size: 1.5em;
-	font-weight: 300;
-	padding: 20px 20px;
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// Animation
-////////////////////////////////////////////////////////////////////////////////
-@keyframes mainHeaderColors {
-	000% {background-color: #4C49A2;}
-	025% {background-color: #35235D;}
-	050% {background-color: #A31A48;}
-	075% {background-color: #DB2464;}
-	100% {background-color: #4C49A2;}
-}
-
-@keyframes socialColors {
-	000% {background-color: #DB2464;}
-	025% {background-color: #A31A48;}
-	050% {background-color: #35235D;}
-	075% {background-color: #4C49A2;}
-	100% {background-color: #DB2464;}
-}
-
-@keyframes publicationlColors {
-	000% {background-color: #A31A48;}
-	025% {background-color: #35235D;}
-	050% {background-color: #4C49A2;}
-	075% {background-color: #DB2464;}
-	100% {background-color: #A31A48;}
+//End @media only screen and (orientation: landscape)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -216,30 +253,22 @@ strong {font-weight: 300;}
 ////////////////////////////////////////////////////////////////////////////////
 @media only screen and (min-width: 769px) {
 
-	.author h1 {margin-bottom: 10px;}
-	.author h1 > span {display: inline;}
-
-	.author .name,
-	.author .surname,
-	.author .lastname {
-		font-size: 5em;
-		font-weight: 900;
+	.wrapper {
+		padding: 0 24px;
 	}
 
-	.author .role {font-size: 2.8em;}
+	.author .name 		{font-size: 5em;}
+	.author .surname 	{font-size: 4em;}
+	.author .lastname 	{font-size: 3em;}
+	.author h2 			{font-size: 1.8em;}
+	.author .role 		{font-size: 1.4em;}
 
-	.socialLinks li:not(:last-child) {margin-right: 30px;}
-
-
-	.publicationList a {
-		transition-delay: 0.2s;
-		transition-duration: 0.2s;
+	.articlesList li {
+		flex-basis: calc(50% - 16px);
 	}
 
-	.publicationList a:hover {
-		text-decoration: none;
-		transform: scale(1.2);
-		transform-origin: center right;
+	.socialLinks li {
+		flex-basis: calc(25% - 16px);
 	}
 
 //End @media only screen and (min-width: 769px)
@@ -250,27 +279,13 @@ strong {font-weight: 300;}
 ////////////////////////////////////////////////////////////////////////////////
 @media only screen and (min-width: 1025px) {
 
-	.mainHeader {height: calc(100vh - 100px);}
+	.author .name 		{font-size: 8em;}
+	.author .surname 	{font-size: 6em;}
+	.author .lastname 	{font-size: 4em;}
 
-	.author {right: 40px;}
-	.author h1 {margin-bottom: 20px;}
-
-	.mainHeader .name,
-	.mainHeader .surname,
-	.mainHeader .lastname {
-		font-size: 8em;
+	.articlesList li {
+		flex-basis: calc(33% - 16px);
 	}
-
-	.author .role {font-size: 3.8em;}
-	.social {padding: 20px 40px;}
-
-	.socialLinks a {
-		font-size: 3em;
-		padding: 10px 12px 8px 12px;
-	}
-
-	.publications header {padding: 30px 40px;}
-	.publicationList a {padding: 20px 40px;}
 
 //End @media only screen and (min-width: 769px)
 }
@@ -280,9 +295,9 @@ strong {font-weight: 300;}
 ////////////////////////////////////////////////////////////////////////////////
 @media only screen and (min-width: 1500px) {
 
-	.mainHeader .name,
-	.mainHeader .surname,
-	.mainHeader .lastname {font-size: 12em;}
+	.author .name 		{font-size: 12em;}
+	.author .surname 	{font-size: 8em;}
+	.author .lastname 	{font-size: 5em;}
 
 //End @media only screen and (min-width: 769px)
 }

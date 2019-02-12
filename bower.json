@@ -12,7 +12,6 @@
 	"ignore": [],
 	"dependencies": {
 		"acResetCSS": "*",
-		"font-awesome": "5.0.13",
 		"html5shiv": "*"
 	}
 }

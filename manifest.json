@@ -1,0 +1,20 @@
+{
+  "short_name": "id.etc.br",
+  "name": "Idmar Ramos Junior",
+  "icons": [
+    {
+      "src": "/img/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "theme_color": "#9f041b",
+  "background_color": "#9f041b",
+  "display": "standalone"
+}

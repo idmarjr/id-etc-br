@@ -7,8 +7,9 @@
 		"url": "https://github.com/idmarjr/id-etc-br"
 	},
 	"devDependencies": {
-		"gulp": "3.9.0",
+		"gulp": "3.9.1",
 		"gulp-autoprefixer": "*",
+		"gulp-minify-css": "*",
 		"gulp-sass": "*",
 		"gulp-sourcemaps": "*"
 	},
