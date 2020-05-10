@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const minify = require('gulp-minify-css');
+const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
@@ -32,7 +32,7 @@ function distCompile() {
 	.src(sassInput)
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(autoprefixer())
-	.pipe(minify())
+	.pipe(cleanCSS())
 	.pipe(gulp.dest(dist))
 };
 
