@@ -1,21 +1,21 @@
 {
 	"name": "id.etc.br",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"homepage": "http://id.etc.br",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/idmarjr/id-etc-br"
 	},
 	"devDependencies": {
-		"gulp": "3.9.1",
-		"gulp-autoprefixer": "*",
-		"gulp-minify-css": "*",
-		"gulp-sass": "*",
-		"gulp-sourcemaps": "*"
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-minify-css": "^1.2.4",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"node-sass": "^4.14.1"
 	},
 	"dependencies": {
-		"node-sass": "^4.9.0"
-		"ac-css-reset": "*",
-		"html5shiv": "*"
+		"ac-css-reset": "^1.1.1",
+		"html5shiv": "^3.7.3"
 	}
 }
