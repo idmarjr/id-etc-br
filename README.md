@@ -1,7 +1,8 @@
 # Idmar Ramos Junior personal website
 
-Hi, my name is Idmar (But you can call me just **Id**). I'm a Brazilian UX Designer at [Booking.com](https://booking.com).
-This is the code from my personal website [https://id.etc.br](https://id.etc.br). Feel free to fork and use this code.
+Hi, my name is Idmar (But you can call me just **Id**). I'm a Brazilian UX Designer at [Booking.com](https://booking.com).  
+This is the code from my personal website [https://id.etc.br](https://id.etc.br).  
+Feel free to fork and use this code.
 
 ## What you need
 - [NodeJS](https://nodejs.org);
@@ -13,4 +14,4 @@ This is the code from my personal website [https://id.etc.br](https://id.etc.br)
 1. Run `gulp watch` to start Gulp tasks;
 1. Have fun;
 
-Styles are in `sass/` folder and they will be compiled via `gulp` to a **css/** folder.
+Styles are in `sass/` folder and they will be compiled via `gulp` to a `css/` folder.
