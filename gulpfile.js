@@ -1,43 +1,48 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var minify = require('gulp-minify-css');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+"use strict";
 
-//Sass variables
-const input = './sass/*.scss';
-const output = './css/';
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const minify = require('gulp-minify-css');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+
+// Location variables
+const sassInput = './sass/**/*.scss';
+const sassOutput = './css/';
 const dist = './dist/';
-var sassOptions = {
+
+// Sass output options
+let sassOptions = {
 	errLogToConsole: true,
 	outputStyle: 'expanded'
 };
 
-gulp.task('sass', function () {
+function scssCompile() {
 	return gulp
-	.src(input)
+	.src(sassInput)
 	.pipe(sourcemaps.init())
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(sourcemaps.write())
 	.pipe(autoprefixer())
-	.pipe(gulp.dest(output))
-});//End task sass
+	.pipe(gulp.dest(sassOutput))
+};
 
-gulp.task('watch', function() {
+function distCompile() {
 	return gulp
-	.watch(input, ['sass'])
-	.on('change', function(event) {
-	console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-	});
-});//End tastk watch
-
-gulp.task('dist', function () {
-	return gulp
-	.src(input)
+	.src(sassInput)
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(autoprefixer())
 	.pipe(minify())
 	.pipe(gulp.dest(dist))
-});//End taslk dist
+};
 
-gulp.task('default', ['sass','watch']);
+function watch() {
+	return gulp
+	.watch(sassInput, scssCompile)
+	.on('change', function(path) {
+		console.log(`File ${path} was changed, running tasks...`);
+	});
+};
+
+exports.dist = distCompile;
+exports.watch = watch;
