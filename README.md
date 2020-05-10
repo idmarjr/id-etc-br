@@ -1,16 +1,16 @@
-# Idmar Ramos Junior personal webisite
+# Idmar Ramos Junior personal website
 
-Hi, my name is Idmar (But you can call me just _Id_). I'm a brazilian UX Designer at [Booking.com](http://booking.com).
-This is the code from my personal website [id.etc.br](http://id.etc.br). Feel free to fork and use this code in your projects.
+Hi, my name is Idmar (But you can call me just **Id**). I'm a Brazilian UX Designer at [Booking.com](https://booking.com).
+This is the code from my personal website [https://id.etc.br](https://id.etc.br). Feel free to fork and use this code.
 
-## What you need:
+## What you need
 - [NodeJS](https://nodejs.org);
-- [Gulp](http://gulpjs.com)
+- [Gulp](https://gulpjs.com)
 
-## Setup the project:
-1. Open your command line tool and navigate to project folder;
+## Setup
+1. Using your command line tool, navigate to project folder;
 1. Run `npm install` to install project dependencies;
-1. Run `gulp` to start Gulp tasks;
-1. Have fun developing;
+1. Run `gulp watch` to start Gulp tasks;
+1. Have fun;
 
-Styles are in **sass/** folder and they will be compiled via `gulp` to a **css/** folder.
+Styles are in `sass/` folder and they will be compiled via `gulp` to a **css/** folder.
