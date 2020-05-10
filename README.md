@@ -5,14 +5,12 @@ This is the code from my personal website [id.etc.br](http://id.etc.br). Feel fr
 
 ## What you need:
 - [NodeJS](https://nodejs.org);
-- [Bower](http://bower.io);
 - [Gulp](http://gulpjs.com)
 
 ## Setup the project:
 1. Open your command line tool and navigate to project folder;
-2. Run `bower install` to install frontend dependencies;
-3. Run `npm install` to install project dependencies;
-4. Run `gulp` to start Gulp tasks;
-5. Have fun developing;
+1. Run `npm install` to install project dependencies;
+1. Run `gulp` to start Gulp tasks;
+1. Have fun developing;
 
 Styles are in **sass/** folder and they will be compiled via `gulp` to a **css/** folder.

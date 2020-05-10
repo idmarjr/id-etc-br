@@ -15,5 +15,7 @@
 	},
 	"dependencies": {
 		"node-sass": "^4.9.0"
+		"ac-css-reset": "*",
+		"html5shiv": "*"
 	}
 }
