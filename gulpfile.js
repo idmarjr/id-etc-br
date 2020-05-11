@@ -11,9 +11,9 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 // Location variables
-const scssInput = './sass/**/*.scss';
+const scssInput = './scss/**/*.scss';
 const jsInput = './js/**/*.js'
-const sassOutput = './dist/css/';
+const scssOutput = './dist/css/';
 const distJS = './dist/js'
 
 // Sass output options
@@ -29,7 +29,7 @@ function scssCompile() {
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(postcss( [ autoprefixer(), cssnano() ] ))
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest(sassOutput))
+	.pipe(gulp.dest(scssOutput))
 };
 
 function jsCompile() {
