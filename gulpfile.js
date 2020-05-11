@@ -2,6 +2,7 @@
 const { series, parallel } = require('gulp');
 
 const gulp = require('gulp');
+const plumber = require("gulp-plumber");
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const sass = require('gulp-sass');
@@ -25,6 +26,7 @@ let sassOptions = {
 function scssCompile() {
 	return gulp
 	.src(scssInput)
+	.pipe(plumber())
 	.pipe(sourcemaps.init())
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(postcss( [ autoprefixer(), cssnano() ] ))
@@ -35,6 +37,7 @@ function scssCompile() {
 function jsCompile() {
 	return gulp
 	.src(jsInput)
+	.pipe(plumber())
 	.pipe(concat('app.js'))
 	.pipe(terser())
 	.pipe(gulp.dest(distJS))
