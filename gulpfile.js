@@ -1,6 +1,8 @@
 "use strict";
 
 const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
@@ -10,6 +12,8 @@ const cssnano = require('cssnano');
 // Location variables
 const sassInput = './sass/**/*.scss';
 const sassOutput = './css/';
+const jsInput = './js/**/*.js'
+const distJS = './dist/js'
 const dist = './dist/';
 
 // Sass output options
@@ -28,6 +32,14 @@ function scssCompile() {
 	.pipe(gulp.dest(sassOutput))
 };
 
+function jsCompile() {
+	return gulp
+	.src(jsInput)
+	.pipe(concat('app.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest(distJS))
+};
+
 function distCompile() {
 	return gulp
 	.src(sassInput)
@@ -44,5 +56,6 @@ function watch() {
 	});
 };
 
+exports.jsCompile = jsCompile;
 exports.dist = distCompile;
 exports.watch = watch;
