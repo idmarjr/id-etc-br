@@ -22,7 +22,7 @@ const PRECACHE_URLS = [
 	'./',
 	'./index.html',
 	'./js/app.js',
-	'./bower_components/acResetCSS/dist/acReset.css',
+	'./node_modules/ac-css-reset/dist/ac-css-reset.css',
 	'./css/application.css'
 ];
 
