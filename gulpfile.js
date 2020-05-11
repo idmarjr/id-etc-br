@@ -1,4 +1,5 @@
 "use strict";
+const { series, parallel } = require('gulp');
 
 const gulp = require('gulp');
 const concat = require('gulp-concat');
@@ -11,10 +12,9 @@ const cssnano = require('cssnano');
 
 // Location variables
 const sassInput = './sass/**/*.scss';
-const sassOutput = './css/';
 const jsInput = './js/**/*.js'
+const sassOutput = './dist/css/';
 const distJS = './dist/js'
-const dist = './dist/';
 
 // Sass output options
 let sassOptions = {
@@ -27,7 +27,7 @@ function scssCompile() {
 	.src(sassInput)
 	.pipe(sourcemaps.init())
 	.pipe(sass(sassOptions).on('error', sass.logError))
-	.pipe(postcss( [ autoprefixer() ] ))
+	.pipe(postcss( [ autoprefixer(), cssnano() ] ))
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(sassOutput))
 };
@@ -40,22 +40,22 @@ function jsCompile() {
 	.pipe(gulp.dest(distJS))
 };
 
-function distCompile() {
-	return gulp
-	.src(sassInput)
-	.pipe(sass(sassOptions).on('error', sass.logError))
-	.pipe(postcss([ autoprefixer(), cssnano() ]))
-	.pipe(gulp.dest(dist))
-};
-
 function watch() {
 	return gulp
-	.watch(sassInput, scssCompile)
+	.watch(
+		[sassInput, jsInput],
+		parallel(scssCompile, jsCompile)
+	)
 	.on('change', function(path) {
 		console.log(`File ${path} was changed, running tasks...`);
 	});
 };
 
+// Export tasks
+exports.scssCompile = scssCompile;
 exports.jsCompile = jsCompile;
-exports.dist = distCompile;
-exports.watch = watch;
+
+exports.default = series(
+	parallel(scssCompile, jsCompile),
+	watch
+);
