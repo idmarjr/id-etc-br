@@ -11,7 +11,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 // Location variables
-const sassInput = './sass/**/*.scss';
+const scssInput = './sass/**/*.scss';
 const jsInput = './js/**/*.js'
 const sassOutput = './dist/css/';
 const distJS = './dist/js'
@@ -24,7 +24,7 @@ let sassOptions = {
 
 function scssCompile() {
 	return gulp
-	.src(sassInput)
+	.src(scssInput)
 	.pipe(sourcemaps.init())
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(postcss( [ autoprefixer(), cssnano() ] ))
@@ -43,7 +43,7 @@ function jsCompile() {
 function watch() {
 	return gulp
 	.watch(
-		[sassInput, jsInput],
+		[scssInput, jsInput],
 		parallel(scssCompile, jsCompile)
 	)
 	.on('change', function(path) {
