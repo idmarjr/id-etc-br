@@ -2,9 +2,10 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const cleanCSS = require('gulp-clean-css');
+const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 // Location variables
 const sassInput = './sass/**/*.scss';
@@ -22,8 +23,8 @@ function scssCompile() {
 	.src(sassInput)
 	.pipe(sourcemaps.init())
 	.pipe(sass(sassOptions).on('error', sass.logError))
+	.pipe(postcss( [ autoprefixer() ] ))
 	.pipe(sourcemaps.write())
-	.pipe(autoprefixer())
 	.pipe(gulp.dest(sassOutput))
 };
 
@@ -31,8 +32,7 @@ function distCompile() {
 	return gulp
 	.src(sassInput)
 	.pipe(sass(sassOptions).on('error', sass.logError))
-	.pipe(autoprefixer())
-	.pipe(cleanCSS())
+	.pipe(postcss([ autoprefixer(), cssnano() ]))
 	.pipe(gulp.dest(dist))
 };
 
