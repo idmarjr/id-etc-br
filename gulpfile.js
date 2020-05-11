@@ -3,7 +3,7 @@ const { series, parallel } = require('gulp');
 
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
@@ -36,7 +36,7 @@ function jsCompile() {
 	return gulp
 	.src(jsInput)
 	.pipe(concat('app.js'))
-	.pipe(uglify())
+	.pipe(terser())
 	.pipe(gulp.dest(distJS))
 };
 
