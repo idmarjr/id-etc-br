@@ -3,6 +3,8 @@ const { series, parallel } = require('gulp');
 
 const gulp = require('gulp');
 const plumber = require("gulp-plumber");
+const newer = require('gulp-newer');
+const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const sass = require('gulp-sass');
@@ -43,6 +45,28 @@ function jsCompile() {
 	.pipe(gulp.dest(distJS))
 };
 
+function imagesOptimize() {
+	const imageOptimization = [
+		imagemin.gifsicle({ interlaced: true }),
+		imagemin.mozjpeg({ progressive: true }),
+		imagemin.optipng({ optimizationLevel: 5 }),
+		imagemin.svgo({
+			plugins: [
+				{
+					removeViewBox: false,
+					collapseGroups: true
+				}
+			]
+		})
+	];
+
+	return gulp
+	.src('./img/**/*')
+	.pipe(newer('./dist/img/'))
+	.pipe(imagemin(imageOptimization))
+	.pipe(gulp.dest('./dist/img/'))
+}
+
 function watch() {
 	return gulp
 	.watch(
@@ -57,6 +81,7 @@ function watch() {
 // Export tasks
 exports.scssCompile = scssCompile;
 exports.jsCompile = jsCompile;
+exports.images = imagesOptimize;
 
 exports.default = series(
 	parallel(scssCompile, jsCompile),
