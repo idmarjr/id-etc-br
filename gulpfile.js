@@ -20,10 +20,6 @@ const jsInput = './js/**/*.js'
 const scssOutput = './dist/css/';
 const distJS = './dist/js'
 
-// Sass output options
-let sassOptions = {
-	errLogToConsole: true,
-	outputStyle: 'expanded'
 function clean() {
 	return del(['./dist/']);
 }
@@ -31,6 +27,11 @@ function clean() {
 };
 
 function scssCompile() {
+	const sassOptions = {
+		errLogToConsole: true,
+		outputStyle: 'expanded'
+	};
+
 	return gulp
 	.src(scssInput)
 	.pipe(plumber())
