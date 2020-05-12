@@ -17,8 +17,11 @@ const del = require('del');
 // Location variables
 const scssInput = './scss/**/*.scss';
 const jsInput = './js/**/*.js'
+const imgInput = './img/**/*'
+
 const scssOutput = './dist/css/';
 const distJS = './dist/js/'
+const imgOutput = './dist/img/'
 
 ////////////////////////////////////////////////////////////////////////////////
 // Clean build/ folder task
@@ -92,10 +95,10 @@ function imagesOptimize() {
 	];
 
 	return gulp
-	.src('./img/**/*')
-	.pipe(newer('./dist/img/'))
+	.src(imgInput)
+	.pipe(newer(imgOutput))
 	.pipe(imagemin(imageOptimization))
-	.pipe(gulp.dest('./dist/img/'))
+	.pipe(gulp.dest(imgOutput))
 }
 
 ////////////////////////////////////////////////////////////////////////////////
