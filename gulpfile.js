@@ -124,7 +124,7 @@ exports.clean = clean;
 // Default task
 exports.default = series(
 	clean,
-	parallel(scssCompile, jsCompile),
+	scssCompile,
 	watch
 );
 
