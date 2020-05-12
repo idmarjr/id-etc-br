@@ -19,7 +19,7 @@ const scssInput = './scss/**/*.scss';
 const jsInput = './js/**/*.js'
 const imgInput = './img/**/*'
 
-const scssOutput = './dist/css/';
+const scssDevOutput = './css/';
 const distJS = './dist/js/'
 const imgOutput = './dist/img/'
 
@@ -27,7 +27,7 @@ const imgOutput = './dist/img/'
 // Clean build/ folder task
 ////////////////////////////////////////////////////////////////////////////////
 function clean() {
-	return del(['./dist/']);
+	return del(['./dist/', './css/']);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -37,7 +37,8 @@ function copyFilesToBuild() {
 	const files = [
 		'index.html',
 		'service-worker.js',
-		'manifest.json'
+		'manifest.json',
+		'./css/**/*'
 	];
 
 	return gulp
@@ -61,7 +62,7 @@ function scssCompile() {
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(postcss( [ autoprefixer(), cssnano() ] ))
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest(scssOutput))
+	.pipe(gulp.dest(scssDevOutput))
 };
 
 ////////////////////////////////////////////////////////////////////////////////
