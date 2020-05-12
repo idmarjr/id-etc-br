@@ -12,6 +12,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const del = require('del');
 
 // Location variables
 const scssInput = './scss/**/*.scss';
@@ -23,6 +24,10 @@ const distJS = './dist/js'
 let sassOptions = {
 	errLogToConsole: true,
 	outputStyle: 'expanded'
+function clean() {
+	return del(['./dist/']);
+}
+
 };
 
 function scssCompile() {
@@ -84,6 +89,7 @@ exports.jsCompile = jsCompile;
 exports.images = imagesOptimize;
 
 exports.default = series(
+	clean,
 	parallel(scssCompile, jsCompile),
 	watch
 );
