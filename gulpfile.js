@@ -134,5 +134,6 @@ exports.default = series(
 // Build for deploy task
 exports.build = series(
 	clean,
-	parallel(scssCompile, jsCompile, imagesOptimize, copyFilesToBuild),
+	parallel(scssCompile, jsCompile, imagesOptimize),
+	copyFilesToBuild
 )
