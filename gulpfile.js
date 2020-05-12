@@ -2,7 +2,7 @@
 const { series, parallel } = require('gulp');
 
 const gulp = require('gulp');
-const plumber = require("gulp-plumber");
+const plumber = require('gulp-plumber');
 const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
@@ -18,7 +18,7 @@ const del = require('del');
 const scssInput = './scss/**/*.scss';
 const jsInput = './js/**/*.js'
 const scssOutput = './dist/css/';
-const distJS = './dist/js'
+const distJS = './dist/js/'
 
 function clean() {
 	return del(['./dist/']);
