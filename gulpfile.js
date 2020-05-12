@@ -120,9 +120,6 @@ function watch() {
 // Export tasks
 ////////////////////////////////////////////////////////////////////////////////
 exports.clean = clean;
-exports.scssCompile = scssCompile;
-exports.jsCompile = jsCompile;
-exports.images = imagesOptimize;
 
 // Default task
 exports.default = series(
