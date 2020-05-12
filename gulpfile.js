@@ -100,8 +100,15 @@ exports.scssCompile = scssCompile;
 exports.jsCompile = jsCompile;
 exports.images = imagesOptimize;
 
+// Default task
 exports.default = series(
 	clean,
 	parallel(scssCompile, jsCompile),
 	watch
 );
+
+// Build for deploy task
+exports.build = series(
+	clean,
+	parallel(scssCompile, jsCompile, imagesOptimize, copyFilesToBuild),
+)
