@@ -24,6 +24,16 @@ function clean() {
 	return del(['./dist/']);
 }
 
+function copyFilesToBuild() {
+	const files = [
+		'index.html',
+		'service-worker.js',
+		'manifest.json'
+	];
+
+	return gulp
+	.src(files, {base: '.'})
+	.pipe(gulp.dest('./dist/'))
 };
 
 function scssCompile() {
