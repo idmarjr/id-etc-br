@@ -47,6 +47,19 @@ function copyFilesToBuild() {
 };
 
 ////////////////////////////////////////////////////////////////////////////////
+// Copy external dependencies
+////////////////////////////////////////////////////////////////////////////////
+function copyCssDependencies() {
+	const CssDependenciesList = [
+		'./node_modules/ac-css-reset/dist/ac-css-reset.css'
+	];
+
+	return gulp
+	.src(CssDependenciesList)
+	.pipe(gulp.dest(scssDevOutput))
+};
+
+////////////////////////////////////////////////////////////////////////////////
 // Compile CSS task
 ////////////////////////////////////////////////////////////////////////////////
 function scssCompile() {
@@ -124,6 +137,7 @@ exports.clean = clean;
 // Default task
 exports.default = series(
 	clean,
+	copyCssDependencies,
 	scssCompile,
 	watch
 );
@@ -131,6 +145,6 @@ exports.default = series(
 // Build for deploy task
 exports.build = series(
 	clean,
-	parallel(scssCompile, jsCompile, imagesOptimize),
+	parallel(copyCssDependencies, scssCompile, jsCompile, imagesOptimize),
 	copyFilesToBuild
 )
