@@ -13,6 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const del = require('del');
+const browserSync = require('browser-sync').create();
 
 // Input location variables
 const scssInput = './scss/**/*.scss';
@@ -130,12 +131,32 @@ function imagesOptimize() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// BrowserSync setup
+////////////////////////////////////////////////////////////////////////////////
+function serve(done) {
+	browserSync.init({
+		server: {
+			baseDir: "./"
+		}
+	});
+	done()
+};
+
+function reload(done) {
+	browserSync.reload();
+	done();
+}
+
+////////////////////////////////////////////////////////////////////////////////
 // Watch task
 ////////////////////////////////////////////////////////////////////////////////
 function watchChanges() {
 	gulp.watch(
 		[scssInput, jsInput],
-		parallel(scssCompile, jsCompile)
+		series(
+			parallel(scssCompile, jsCompile),
+			reload
+		)
 	)
 	.on('change', function(path) {
 		console.log(`File ${path} was changed, running tasks...`);
@@ -163,6 +184,7 @@ exports.clean = clean;
 exports.default = series(
 	clean,
 	compilation,
+	serve,
 	watchChanges
 );
 
