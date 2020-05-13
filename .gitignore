@@ -1,6 +1,6 @@
 # Ignore list:
 bower_components/
 node_modules/
-css/
 dist/
+assets/
 *.DS_Store

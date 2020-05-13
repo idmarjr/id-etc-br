@@ -14,31 +14,32 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const del = require('del');
 
-// Location variables
+// Input location variables
 const scssInput = './scss/**/*.scss';
 const jsInput = './js/**/*.js'
 const imgInput = './img/**/*'
 
-const scssDevOutput = './css/';
-const distJS = './dist/js/'
-const imgOutput = './dist/img/'
+// Output location variables
+const cssAssets = './assets/css/';
+const jsAssets = './assets/js/';
+const imgAssets = './assets/img/'
 
 ////////////////////////////////////////////////////////////////////////////////
-// Clean build/ folder task
+// Delete build/ and assets/ folders
 ////////////////////////////////////////////////////////////////////////////////
 function clean() {
-	return del(['./dist/', './css/']);
+	return del(['./dist/', './assets/']);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// Copy individual files to build/ folder
+// Copy files to build/
 ////////////////////////////////////////////////////////////////////////////////
 function copyFilesToBuild() {
 	const files = [
 		'index.html',
 		'service-worker.js',
 		'manifest.json',
-		'./css/**/*'
+		'./assets/**/*'
 	];
 
 	return gulp
@@ -47,7 +48,7 @@ function copyFilesToBuild() {
 };
 
 ////////////////////////////////////////////////////////////////////////////////
-// Copy external dependencies
+// Copy external CSS dependencies
 ////////////////////////////////////////////////////////////////////////////////
 function copyCssDependencies() {
 	const CssDependenciesList = [
@@ -56,7 +57,20 @@ function copyCssDependencies() {
 
 	return gulp
 	.src(CssDependenciesList)
-	.pipe(gulp.dest(scssDevOutput))
+	.pipe(gulp.dest(cssAssets))
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// Copy external JS dependencies
+////////////////////////////////////////////////////////////////////////////////
+function copyJsDependencies() {
+	const jsDependenciesList = [
+		'./node_modules/html5shiv/dist/html5shiv.min.js'
+	];
+
+	return gulp
+	.src(jsDependenciesList)
+	.pipe(gulp.dest(jsAssets))
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +89,7 @@ function scssCompile() {
 	.pipe(sass(sassOptions).on('error', sass.logError))
 	.pipe(postcss( [ autoprefixer(), cssnano() ] ))
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest(scssDevOutput))
+	.pipe(gulp.dest(cssAssets))
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +101,7 @@ function jsCompile() {
 	.pipe(plumber())
 	.pipe(concat('app.js'))
 	.pipe(terser())
-	.pipe(gulp.dest(distJS))
+	.pipe(gulp.dest(jsAssets))
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -110,9 +124,9 @@ function imagesOptimize() {
 
 	return gulp
 	.src(imgInput)
-	.pipe(newer(imgOutput))
+	.pipe(newer(imgAssets))
 	.pipe(imagemin(imageOptimization))
-	.pipe(gulp.dest(imgOutput))
+	.pipe(gulp.dest(imgAssets))
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -137,14 +151,25 @@ exports.clean = clean;
 // Default task
 exports.default = series(
 	clean,
-	copyCssDependencies,
-	scssCompile,
+	parallel(
+		copyCssDependencies,
+		copyJsDependencies,
+		scssCompile,
+		jsCompile,
+		imagesOptimize
+	),
 	watch
 );
 
 // Build for deploy task
 exports.build = series(
 	clean,
-	parallel(copyCssDependencies, scssCompile, jsCompile, imagesOptimize),
+	parallel(
+		copyCssDependencies,
+		copyJsDependencies,
+		scssCompile,
+		jsCompile,
+		imagesOptimize
+	),
 	copyFilesToBuild
 )
