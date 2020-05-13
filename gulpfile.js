@@ -143,6 +143,18 @@ function watchChanges() {
 };
 
 ////////////////////////////////////////////////////////////////////////////////
+// Compilation complex task
+////////////////////////////////////////////////////////////////////////////////
+const compilation =
+	gulp.parallel(
+		copyCssDependencies,
+		copyJsDependencies,
+		scssCompile,
+		jsCompile,
+		imagesOptimize
+	);
+
+////////////////////////////////////////////////////////////////////////////////
 // Export tasks
 ////////////////////////////////////////////////////////////////////////////////
 exports.clean = clean;
@@ -150,25 +162,13 @@ exports.clean = clean;
 // Default task
 exports.default = series(
 	clean,
-	parallel(
-		copyCssDependencies,
-		copyJsDependencies,
-		scssCompile,
-		jsCompile,
-		imagesOptimize
-	),
+	compilation,
 	watchChanges
 );
 
 // Build for deploy task
 exports.build = series(
 	clean,
-	parallel(
-		copyCssDependencies,
-		copyJsDependencies,
-		scssCompile,
-		jsCompile,
-		imagesOptimize
-	),
+	compilation,
 	copyFilesToBuild
-)
+);
