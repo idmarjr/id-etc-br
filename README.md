@@ -23,8 +23,8 @@ If possible, let me know where you're using it. I will love to help if needed.
 - Source styles lives inside of `./sass/`;
 - Source javascript lives inside of `./js/`;
 
-They are all are compiled inside of `assets/` via gulp.  
-This means you should link all assets from `./assets/` folder;
+They are all are compiled inside of `./assets/` via gulp.  
+This means you should link everything from `./assets/` folder;
 
 ## Deploy
 
