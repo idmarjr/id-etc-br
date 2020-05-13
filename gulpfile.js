@@ -132,9 +132,8 @@ function imagesOptimize() {
 ////////////////////////////////////////////////////////////////////////////////
 // Watch task
 ////////////////////////////////////////////////////////////////////////////////
-function watch() {
-	return gulp
-	.watch(
+function watchChanges() {
+	gulp.watch(
 		[scssInput, jsInput],
 		parallel(scssCompile, jsCompile)
 	)
@@ -158,7 +157,7 @@ exports.default = series(
 		jsCompile,
 		imagesOptimize
 	),
-	watch
+	watchChanges
 );
 
 // Build for deploy task
