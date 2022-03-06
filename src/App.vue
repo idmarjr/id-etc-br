@@ -4,12 +4,13 @@
 
 import MainHeader from './components/MainHeader.vue'
 import About from './components/About.vue'
+import Work from './components/Work.vue';
 </script>
 
 <template>
   <MainHeader />
   <About />
-
+  <Work />
 </template>
 
 <style>
