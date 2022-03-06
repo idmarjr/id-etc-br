@@ -1,4 +1,4 @@
-<script setup lang="ts">
+/<script setup lang="ts">
 
 </script>
 
@@ -12,7 +12,7 @@
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, omnis. Doloribus expedita accusamus, quas sunt fugit.</p>
 		</div>
 		<div class="projectScreenshot">
-			<img src="" alt="Project image description" />
+			<img src="../../assets/projects/br-modelo-site.png" alt="Project image description" />
 		</div>
 	</li>
 </template>
