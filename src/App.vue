@@ -9,10 +9,10 @@ import Social from './components/Social.vue';
 </script>
 
 <template>
-  <MainHeader />
-  <About />
-  <Work />
-  <Social />
+	<MainHeader />
+	<About />
+	<Work />
+	<Social />
 </template>
 
 <style>
