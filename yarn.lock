@@ -201,6 +201,11 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.31.tgz#c90de7126d833dcd3a4c7534d534be2fb41faa4e"
   integrity sha512-ymN2pj6zEjiKJZbrf98UM2pfDd6F2H7ksKw7NDt/ZZ1fh5Ei39X5tABugtT03ZRlWd9imccoK0hE8hpjpU7irQ==
 
+ac-css-reset@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ac-css-reset/-/ac-css-reset-1.1.1.tgz#d66c238ffbd439af982ff2dd183cd08a5c58c87a"
+  integrity sha512-Upr5Fnl9XhT08vYNX+7wMqeqYk6abQ8Lgnzwjq6sZrmgRImdvgR5vJN/qWB1jkuabS3mKmiN3uhrbjoU58w33w==
+
 acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
