@@ -33,7 +33,6 @@
 }
 
 .profilePicture {
-	display: block;
 	max-width: 82px;
 	max-height: 82px;
 	border-radius: 100%;
@@ -58,6 +57,7 @@
 .mainNav li a {
 	display: block;
 	padding: 6px;
+	margin: 0 6px;
 	font-size: 1.4em;
 	color: var(--primary-color);
 }
