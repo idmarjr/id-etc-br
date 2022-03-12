@@ -22,8 +22,4 @@
 
 <style scoped>
 
-	#work {
-		margin-bottom: 64px;
-	}
-
 </style>
