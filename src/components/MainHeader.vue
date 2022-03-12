@@ -58,7 +58,7 @@
 .mainNav li a {
 	display: block;
 	padding: 6px;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	color: var(--primary-color);
 }
 
