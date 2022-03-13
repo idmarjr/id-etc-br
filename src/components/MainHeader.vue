@@ -24,45 +24,43 @@
 </template>
 
 <style scoped>
+	.mainHeader {
+		padding-top: 64px;
+	}
 
-.mainHeader {
-	padding-top: 64px;
-}
+	.mainHeader .wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.mainHeader .wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	.profilePicture {
+		max-width: 82px;
+		max-height: 82px;
+		border-radius: 100%;
+		overflow: hidden;
+		margin-bottom: 16px;
+	}
 
-.profilePicture {
-	max-width: 82px;
-	max-height: 82px;
-	border-radius: 100%;
-	overflow: hidden;
-	margin-bottom: 16px;
-}
+	.mainNav {
+		width: 100%;
+		padding: 8px;
+		border: 1px solid var(--primary-color);
+		margin-bottom: 12px;
+	}
 
-.mainNav {
-	width: 100%;
-	padding: 8px;
-	border: 1px solid var(--primary-color);
-	margin-bottom: 12px;
-}
+	.mainNav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
 
-.mainNav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-}
-
-.mainNav li a {
-	display: block;
-	padding: 6px;
-	margin: 0 6px;
-	font-size: 1.4em;
-	color: var(--primary-color);
-}
-
+	.mainNav li a {
+		display: block;
+		padding: 6px;
+		margin: 0 6px;
+		font-size: 1.4em;
+		color: var(--primary-color);
+	}
 </style>

@@ -18,9 +18,7 @@
 </template>
 
 <style scoped>
-
-#social {
-	margin-bottom: 64px;
-}
-
+	#social {
+		margin-bottom: 64px;
+	}
 </style>

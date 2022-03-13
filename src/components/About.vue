@@ -14,24 +14,22 @@
 </template>
 
 <style scoped>
+	.intro {
+		max-width: 640px;
+		padding-top: 48px;
+		padding-bottom: 64px;
+		letter-spacing: 0.03em;
+	}
 
-.intro {
-	max-width: 640px;
-	padding-top: 48px;
-	padding-bottom: 64px;
-	letter-spacing: 0.03em;
-}
+	.intro .higlight {
+		font-size: 3.2em;
+		margin-bottom: 12px;
+		font-weight: 300;
+	}
 
-.intro .higlight {
-	font-size: 3.2em;
-	margin-bottom: 12px;
-	font-weight: 300;
-}
-
-.intro p {
-	font-size: 2.6em;
-	line-height: 1.4em;
-	font-weight: 100;
-}
-
+	.intro p {
+		font-size: 2.6em;
+		line-height: 1.4em;
+		font-weight: 100;
+	}
 </style>

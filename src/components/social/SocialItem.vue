@@ -13,7 +13,6 @@
 </template>
 
 <style scoped>
-
 	.socialItem {
 		list-style: none;
 	}
@@ -32,5 +31,4 @@
 	.socialItem a:hover {
 		text-decoration: underline;
 	}
-
 </style>

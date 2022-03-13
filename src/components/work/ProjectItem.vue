@@ -21,7 +21,6 @@
 </template>
 
 <style scoped>
-
 	.project {
 		list-style: none;
 		margin-bottom: 48px;
@@ -54,5 +53,4 @@
 		border-radius: 3px;
 		box-shadow: 0px 2px 4px 0px #00000040;
 	}
-
 </style>
