@@ -17,11 +17,11 @@
 
 <style lang="scss" scoped>
 	.sectionHeader {
-		margin-bottom: 24px;
+		margin-bottom: 36px;
 	}
 	.sectionHeader h2 {
 		position: relative;
-		font-size: 2.6em;
+		font-size: 3.8em;
 		font-weight: 200;
 	}
 
@@ -41,5 +41,17 @@
 		padding-right: 12px;
 		background-color: var(--secondary-color);
 		z-index: 1;
+	}
+
+	////////////////////////////////////////////////////
+	// @media > 810px
+	////////////////////////////////////////////////////
+	@media (min-width: 811px) {
+		.sectionHeader {
+			margin-bottom: 48px;
+		}
+		.sectionHeader h2 {
+			font-size: 4.8em;
+		}
 	}
 </style>

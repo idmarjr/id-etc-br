@@ -48,22 +48,22 @@
 	}
 
 	.projectHeader {
-		margin-bottom: 12px;;
+		margin-bottom: 24px;
 	}
 	.projectHeader h3 {
-		font-size: 2.2em;
+		font-size: 3.2em;
 		font-weight: 200;
-		margin-bottom: 6px;
+		margin-bottom: 8px;
 	}
 
 	.projectHeader p {
-		font-size: 1.4em;
+		font-size: 2em;
 		font-weight: 200;
 		letter-spacing: 0.03;
 	}
 
 	.projectDescription {
-		  font-size: 1.4em;
+		  font-size: 1.6em;
 		  font-weight: 200;
 		  line-height: 1.4;
 		  margin-bottom: 12px;
@@ -73,5 +73,30 @@
 		overflow: hidden;
 		border-radius: 3px;
 		box-shadow: 0px 2px 4px 0px #00000040;
+	}
+
+	////////////////////////////////////////////////////
+	// @media > 810px
+	////////////////////////////////////////////////////
+	@media (min-width: 811px) {
+
+		.project {
+			margin-bottom: 64px;
+		}
+		.projectHeader h3 {
+			font-size: 3.6em;
+			margin-bottom: 12px;
+		}
+
+		.projectHeader p {
+			font-size: 2.4em;
+			letter-spacing: 0.03;
+			margin-bottom: 24px;
+		}
+
+		.projectDescription {
+		  font-size: 2em;
+		  margin-bottom: 24px;
+		}
 	}
 </style>

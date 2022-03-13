@@ -39,7 +39,7 @@
 		{
 			id: 5,
 			company: 'Hotelup',
-			project: 'Web based CRM software (2015 - 2016)',
+			project: 'Web based CRM software (2014 - 2016)',
 			description: 'Hotelup was a responsive web based software that makes things simple to owners, managers and staff of Hotels around the world with a easy-to-use booking system that runs from the cloud.',
 			imageURL: 'src/assets/projects/hotelup-reservations.png',
 			imageDescription: 'Hotelup reservations page',
