@@ -26,9 +26,23 @@
 		font-weight: 200;
 		text-align: center;
 		color: var(--primary-color);
+		transition: all ease-in 0.3s;
 	}
 
 	.socialItem a:hover {
 		text-decoration: underline;
+	}
+
+	////////////////////////////////////////////////////
+	// @media > 810px
+	////////////////////////////////////////////////////
+	@media (min-width: 811px) {
+		.socialItem {
+			flex-basis: calc(25% - 12px);
+		}
+
+		.socialItem a {
+			padding: 42px;
+		}
 	}
 </style>
