@@ -5,7 +5,7 @@
 	import MainHeader from './components/MainHeader.vue'
 	import About from './components/About.vue'
 	import Work from './components/work/index.vue';
-	import Social from './components/Social.vue';
+	import Social from './components/social/index.vue';
 </script>
 
 <template>
