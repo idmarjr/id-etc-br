@@ -8,7 +8,7 @@
 			<header class="intro">
 				<p class="higlight">Hello!</p>
 				<p>I'm <strong>Idmar</strong> a product desinger and front-end developer based in Amsterdam.</p>
-			</header>				
+			</header>
 		</div>
 	</section>
 </template>

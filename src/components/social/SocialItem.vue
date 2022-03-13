@@ -4,7 +4,11 @@
 
 <template>
 	<li class="socialItem">
-		<a href="" target="_blank" rel="noopener noreferrer">Social Media Name</a>
+		<a
+			href=""
+			target="_blank"
+			rel="noopener noreferrer"
+		>Social Media Name</a>
 	</li>
 </template>
 

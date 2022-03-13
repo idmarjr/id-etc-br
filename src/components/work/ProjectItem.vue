@@ -12,7 +12,10 @@
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, omnis. Doloribus expedita accusamus, quas sunt fugit. Elit. Modi, omnisexpedita accusamus, quas. Doloribus expedita</p>
 		</div>
 		<picture class="projectScreenshot">
-			<img src="../../assets/projects/br-modelo-site.png" alt="Project image description" />
+			<img
+				src="../../assets/projects/br-modelo-site.png"
+				alt="Project image description"
+			/>
 		</picture>
 	</li>
 </template>

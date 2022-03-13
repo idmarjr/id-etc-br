@@ -7,7 +7,10 @@
 		<div class="wrapper">
 			<h1 class="vhide">Idmar Ramos Juniuor - Product designer and frontend developer</h1>
 			<picture class="profilePicture">
-				<img src="../assets/id-tulip-fields.png" alt="Idmar picture" />
+				<img
+					src="../assets/id-tulip-fields.png"
+					alt="Idmar picture"
+				/>
 			</picture>
 			<nav class="mainNav">
 				<ul>
