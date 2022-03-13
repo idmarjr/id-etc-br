@@ -1,20 +1,41 @@
-/<script setup lang="ts">
-
+<script setup lang="ts">
+	const props = defineProps({
+		company: {
+			type: String,
+			required: true
+		},
+		project: {
+			type: String,
+			required: true
+		},
+		description: {
+			type: String,
+			required: true
+		},
+		imageUrl: {
+			type: String,
+			required: true
+		},
+		imageDescription: {
+			type: String,
+			required: true
+		}
+	})
 </script>
 
 <template>
 	<li class="project">
 		<header class="projectHeader">
-			<h3>Company Name</h3>
-			<p>Project Name</p>
+			<h3>{{ company }}</h3>
+			<p>{{ project }}</p>
 		</header>
 		<div class="projectDescription">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, omnis. Doloribus expedita accusamus, quas sunt fugit. Elit. Modi, omnisexpedita accusamus, quas. Doloribus expedita</p>
+			<p>{{ description }}</p>
 		</div>
 		<picture class="projectScreenshot">
 			<img
-				src="../../assets/projects/br-modelo-site.png"
-				alt="Project image description"
+				:src="imageUrl"
+				:alt="imageDescription"
 			/>
 		</picture>
 	</li>
