@@ -13,7 +13,7 @@
 	</section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 	.intro {
 		max-width: 640px;
 		padding-top: 48px;

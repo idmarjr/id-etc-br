@@ -15,6 +15,6 @@
 	<Social />
 </template>
 
-<style>
+<style lang="scss">
 
 </style>

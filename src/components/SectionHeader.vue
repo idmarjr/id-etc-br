@@ -8,7 +8,7 @@
 	</header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 	.sectionHeader {
 		margin-bottom: 24px;
 	}

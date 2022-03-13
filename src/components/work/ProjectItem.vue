@@ -20,7 +20,7 @@
 	</li>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 	.project {
 		list-style: none;
 		margin-bottom: 48px;

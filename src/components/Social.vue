@@ -17,7 +17,7 @@
 	</section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 	#social {
 		margin-bottom: 64px;
 	}
