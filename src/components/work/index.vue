@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
-	import SectionHeader from './sectionHeader.vue';
-	import ProjectItem from './work/ProjectItem.vue';
+	import SectionHeader from '../sectionHeader.vue';
+	import ProjectItem from './ProjectItem.vue';
 
 	const ProjectItems = ref([
 		{
