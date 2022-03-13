@@ -1,10 +1,17 @@
 <script setup lang="ts">
-
+	const props = defineProps({
+		title: {
+			type: String,
+			required: true
+		}
+	})
 </script>
 
 <template>
 	<header class="sectionHeader">
-		<h2><span>Section Name</span></h2>
+		<h2>
+			<span>{{ title }}</span>
+		</h2>
 	</header>
 </template>
 

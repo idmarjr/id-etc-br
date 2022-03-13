@@ -6,7 +6,7 @@
 <template>
 	<section id="social">
 		<div class="wrapper">
-			<SectionHeader />
+			<SectionHeader title="Social" />
 			<ul class="socialList">
 				<SocialItem />
 				<SocialItem />

@@ -6,7 +6,7 @@
 <template>
 	<section id="work">
 		<div class="wrapper">
-			<SectionHeader />
+			<SectionHeader title="Work" />
 			<ul>
 				<ProjectItem />
 				<ProjectItem />
