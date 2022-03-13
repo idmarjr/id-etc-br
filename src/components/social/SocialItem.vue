@@ -1,14 +1,23 @@
 <script setup lang="ts">
-
+	const props = defineProps({
+		title: {
+			type: String,
+			required: true
+		},
+		url: {
+			type: String,
+			required: true
+		}
+	})
 </script>
 
 <template>
 	<li class="socialItem">
 		<a
-			href=""
+			:href="url"
 			target="_blank"
 			rel="noopener noreferrer"
-		>Social Media Name</a>
+		>{{ title }}</a>
 	</li>
 </template>
 
@@ -42,7 +51,7 @@
 		}
 
 		.socialItem a {
-			padding: 42px;
+			padding: 42px 24px;
 		}
 	}
 </style>
