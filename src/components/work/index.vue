@@ -40,7 +40,7 @@
 			id: 5,
 			company: 'Hotelup',
 			project: 'Web based CRM software (2014 - 2016)',
-			description: 'Hotelup was a startup I founded together with 4 partners. With initial focus in the Brazilian market it was a software as a service (SaaS) built to help small and medium Hotels/hostels to manage their property. Offering inventory management and billing system among other features, all accessible everywhere via responsive web-based software, our small team managed to bootstrap the product from scratch in only 6 months. Operation took place for around a year before we decide to sunset the product.',
+			description: 'Hotelup was a software as a service (SaaS) built to help small and medium Hotels/hostels to manage their property. Offering inventory management and billing system among other features, all accessible everywhere via responsive web-based software, our small team managed to bootstrap the product from scratch in only 6 months. Operation took place for around a year before we decide to sunset the product.',
 			imageURL: 'src/assets/projects/hotelup-reservations.png',
 			imageDescription: 'Hotelup reservations page',
 		},

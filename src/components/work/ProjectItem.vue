@@ -25,12 +25,14 @@
 
 <template>
 	<li class="project">
-		<header class="projectHeader">
-			<h3>{{ company }}</h3>
-			<p>{{ project }}</p>
-		</header>
-		<div class="projectDescription">
-			<p>{{ description }}</p>
+		<div class="project-info">
+			<header class="projectHeader">
+				<h3>{{ company }}</h3>
+				<p>{{ project }}</p>
+			</header>
+			<div class="projectDescription">
+				<p>{{ description }}</p>
+			</div>
 		</div>
 		<picture class="projectScreenshot">
 			<img
@@ -81,8 +83,15 @@
 	@media (min-width: 811px) {
 
 		.project {
-			margin-bottom: 64px;
+			display: flex;
+			margin-bottom: 120px;
 		}
+
+		.project-info {
+			max-width: 35%;
+			margin-right: 24px;
+		}
+
 		.projectHeader h3 {
 			font-size: 3.6em;
 			margin-bottom: 12px;
@@ -95,8 +104,13 @@
 		}
 
 		.projectDescription {
-		  font-size: 2em;
+		  font-size: 1.6em;
+		  line-height: 1.8em;
 		  margin-bottom: 24px;
+		}
+
+		.projectScreenshot {
+			align-self: flex-start;
 		}
 	}
 </style>
