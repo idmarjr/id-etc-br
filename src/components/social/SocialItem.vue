@@ -31,7 +31,7 @@
 		padding: 18px 12px;
 		border: 1px solid var(--primary-color);
 		margin-bottom: 12px;
-		font-size: 1.6em;
+		font-size: 1.8em;
 		font-weight: 200;
 		text-align: center;
 		color: var(--primary-color);

@@ -60,7 +60,7 @@
 		display: block;
 		padding: 6px;
 		margin: 0 6px;
-		font-size: 1.4em;
+		font-size: 1.8em;
 		color: var(--primary-color);
 	}
 </style>
