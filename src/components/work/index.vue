@@ -10,7 +10,7 @@ const importImage = (imageName: string) => new URL(`../../assets/projects/${imag
 			id: 1,
 			company: 'Booking.com',
 			project: 'Partner content team (2020 - Present)',
-			description: 'Partner content team work to smooth the relationship Booking.com users have with content. It means we work to improve the experience partners have when managing information about their properties as well as how guests will see this at the website. This means we work with multiple topics like photos, property facilities, content moderation among other subjects.',
+			description: 'Partner content team works to smooth the relationship Booking.com users have with content. It means we work to improve partners experience when managing information about their properties as well as how guests will consume that content in the website. To achieve this goals we work with multiple topics like photos, property facilities, content moderation among other subjects.',
 			imageURL: importImage('booking-com-partner-content.png'),
 			imageDescription: 'Booking.com Facilities & Services information',
 		},
