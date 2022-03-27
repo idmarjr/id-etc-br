@@ -1,32 +1,31 @@
 # Idmar Ramos Junior personal website
 
-Code for my personal website [https://id.etc.br](https://id.etc.br).  
-Feel free to fork and use this code.  
-If possible, let me know where you're using it. I will love to help if needed.
+Just another personal website. Feel free to fork, use and/or modify.
 
-## What you need
+## Stack
 
-- [NodeJS](https://nodejs.org);
+- [NodeJS](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Vite](https://vitejs.dev/)
+- [Vue 3](https://vuejs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## Setup
 
-1. Using your command line tool, navigate to project folder;
-1. Run `npm install` to install project dependencies;
-1. Run `gulp` to start development server;
-1. Have fun;
+1. `yarn install`
+1. `yarn vite`
 
----
+## Build & Deploy
 
-## Development
+1. `yarn build`
+1. `yarn preview`
+1. Use the newly created `./dist/` folder to deploy
 
-- Source images lives inside of `./img/;`
-- Source styles lives inside of `./sass/`;
-- Source javascript lives inside of `./js/`;
 
-They are all are compiled inside of `./assets/` via gulp.  
-This means you should link everything from `./assets/` folder;
+## Special thanks
 
-## Deploy
+- [@gil](https://github.com/gil) for the help with [Vue 3](https://vuejs.org/)
+- [@leomaia](https://github.com/leomaia) for feedback in the design and content review
+- [@dihercowitz](https://github.com/dihercowitz) for feedback in the design and content review
 
-1. Run `gulp build`;
-1. Use content generated inside of `./dist/` to deploy;
+You all rock! 🤘
