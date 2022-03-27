@@ -24,8 +24,8 @@ Just another personal website. Feel free to fork, use and/or modify.
 
 ## Special thanks
 
-- @gil for the help with [Vue 3](https://vuejs.org/)
-- @leomaia for feedback in the design and content review
-- @dihercowitz for feedback in the design and content review
+- [@gil](https://github.com/gil) for the help with [Vue 3](https://vuejs.org/)
+- [@leomaia](https://github.com/leomaia) for feedback in the design and content review
+- [@dihercowitz](https://github.com/dihercowitz) for feedback in the design and content review
 
 You all rock! 🤘
