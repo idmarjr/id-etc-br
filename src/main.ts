@@ -3,4 +3,10 @@ import App from './App.vue'
 import 'ac-css-reset/dist/ac-css-reset.css'
 import './assets/globals.scss'
 
-createApp(App).mount('#app')
+import AOS from "aos"
+import 'aos/dist/aos.css'
+
+const app = createApp(App)
+
+AOS.init()
+app.mount('#app')
