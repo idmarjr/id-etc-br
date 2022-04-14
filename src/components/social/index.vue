@@ -28,7 +28,10 @@
 </script>
 
 <template>
-	<section id="social">
+	<section
+		id="social"
+		data-aos="fade-up"
+	>
 		<div class="wrapper">
 			<SectionHeader title="Social" />
 			<ul class="socialList">

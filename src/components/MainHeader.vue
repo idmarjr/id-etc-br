@@ -3,7 +3,10 @@
 </script>
 
 <template>
-	<header class="mainHeader">
+	<header
+		class="mainHeader"
+		data-aos="fade-down"
+	>
 		<div class="wrapper">
 			<h1 class="vhide">Idmar Ramos Juniuor - Product designer and frontend developer</h1>
 			<picture class="profilePicture">
