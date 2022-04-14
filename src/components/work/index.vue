@@ -66,7 +66,10 @@ const importImage = (imageName: string) => new URL(`../../assets/projects/${imag
 </script>
 
 <template>
-	<section id="work">
+	<section
+		id="work"
+		data-aos="fade-down"
+	>
 		<div class="wrapper">
 			<SectionHeader title="Work" />
 			<ul>

@@ -24,7 +24,11 @@
 </script>
 
 <template>
-	<li class="project">
+	<li
+		class="project"
+		data-aos="fade-down"
+		data-aos-delay="200"
+	>
 		<div class="project-info">
 			<header class="projectHeader">
 				<h3>{{ company }}</h3>

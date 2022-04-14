@@ -3,7 +3,10 @@
 </script>
 
 <template>
-	<section id="about">
+	<section
+		id="about"
+		data-aos="fade-down"
+	>
 		<div class="wrapper">
 			<header class="intro">
 				<p class="higlight">Hello!</p>
