@@ -17,4 +17,8 @@
 
 <style lang="scss">
 
+::selection {
+	color: #fff;
+	background-color: #000;
+}
 </style>
