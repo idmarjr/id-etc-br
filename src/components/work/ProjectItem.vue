@@ -102,7 +102,6 @@
 		}
 
 		.projectHeader p {
-			font-size: 2.4em;
 			letter-spacing: 0.03;
 			margin-bottom: 24px;
 		}
