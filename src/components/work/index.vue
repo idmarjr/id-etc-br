@@ -3,14 +3,14 @@
 	import SectionHeader from '../sectionHeader.vue';
 	import ProjectItem from './ProjectItem.vue';
 
-const importImage = (imageName: string) => new URL(`../../assets/projects/${imageName}`, import.meta.url).href
+	const importImage = (imageName: string) => new URL(`../../assets/projects/${imageName}`, import.meta.url).href
 
 	const ProjectItems = ref([
 		{
 			id: 1,
 			company: 'Booking.com',
 			project: 'Partner content (2020 - Present)',
-			description: 'Partner content team works to smooth the relationship Booking.com users have with content. It means we work to improve partners experience when managing information about their properties as well as how guests will consume that content in the website. To achieve this goals we work with multiple topics like photos, property facilities, content moderation among other subjects.',
+			description: 'Partner content team works to smooth the relationship Booking.com users have with content. It means we work to improve partners experience when managing  their property information as well as how guests will consume content when looking for a place to stay. This means we work with multiple topics like photos management, property facilities and content moderation among other subjects. As a UX designer I work close to product managers prioritizing demands, UX Researchers to prepare and run qualitative research and with the tech team to create and ship product improvements using A/B testing.',
 			imageURL: importImage('booking-com-partner-content.png'),
 			imageDescription: 'Booking.com Facilities & Services information',
 		},
@@ -18,7 +18,7 @@ const importImage = (imageName: string) => new URL(`../../assets/projects/${imag
 			id: 2,
 			company: 'Booking.com',
 			project: 'Web direct (2018 - 2020)',
-			description: 'WebDirect was a website content management system that integrated with Booking.com administration tool. It allow partners to create their own customized website using information and reservation engine provided by Booking.com without  deep technical knowledge. Operating as a startup inside the company, our team had full autonomy to shape and develop the product. As a UX designer working in a startup like environment I was responsible for the entire user experience cycle, from research, user interviews, UX/UI Design and in multiple cases, front end implementation.',
+			description: 'WebDirect was a website content management system that integrated with Booking.com administration tool. It allow partners to create their own customized website using information and reservation engine provided by Booking.com without  deep technical knowledge. Operating as a startup inside the company, our team had full autonomy to shape and develop the product. As a UX designer working in a startup like environment I was responsible for the entire user experience cycle including research, user interviews, UX/UI design and in multiple cases, front end development.',
 			imageURL: importImage('webdirect.png'),
 			imageDescription: 'Web visitors page from Webdirect content management system (CMS)',
 		},
@@ -26,7 +26,7 @@ const importImage = (imageName: string) => new URL(`../../assets/projects/${imag
 			id: 3,
 			company: 'Booking.com',
 			project: 'Availability optimisation (2016 - 2018)',
-			description: 'At availability performance team I helped to define and create multiple tools and features to Booking.com Extranet, the tool hoteliers use to manage their properties. The team main focus was to identify blockers and bottle necks that could impact room availability and revenue, helping users to act to improve performance. As a UX designer my contributions were around internal research, ideation, UX and UI design as well as, implement, run and analyse A/B tests.',
+			description: 'At availability performance team I helped to define and create multiple tools and features to Booking.com Extranet, the tool hoteliers use to manage their properties. The team main focus was to identify blockers and bottle necks that could impact room availability and revenue, helping users to act to improve performance. As a UX designer my contributions were around internal research, ideation, UX and UI design as well as, implement, run and analyze A/B tests.',
 			imageURL: importImage('availability-performance.png'),
 			imageDescription: 'Availability optimisation page at Booking.com Extranet',
 		},
