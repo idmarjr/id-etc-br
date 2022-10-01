@@ -11,7 +11,7 @@
 			<h1 class="vhide">Idmar Ramos Juniuor - Product designer and frontend developer</h1>
 			<picture class="profilePicture">
 				<img
-					src="../assets/id-tulip-fields.png"
+					src="../assets/id-2018-focus.jpg"
 					alt="Idmar picture"
 				/>
 			</picture>
