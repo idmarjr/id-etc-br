@@ -10,7 +10,7 @@
 		<div class="wrapper">
 			<header class="intro">
 				<p class="higlight">Hello!</p>
-				<p>I'm <strong>Idmar</strong> a product desinger and front-end developer based in Amsterdam.</p>
+				<p>I'm <strong>Idmar</strong> a product guy with background in UX Design and Front-End development, currently based in Curitiba, Brazil.</p>
 			</header>
 		</div>
 	</section>
@@ -18,7 +18,6 @@
 
 <style lang="scss" scoped>
 	.intro {
-		max-width: 640px;
 		padding: 64px 0;
 		letter-spacing: 0.03em;
 	}
