@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
-	import SectionHeader from '../sectionHeader.vue';
+	import SectionHeader from '../SectionHeader.vue';
 	import ProjectItem from './ProjectItem.vue';
 
 	const importImage = (imageName: string) => new URL(`../../assets/projects/${imageName}`, import.meta.url).href
@@ -10,7 +10,7 @@
 			id: 1,
 			company: 'Booking.com',
 			project: 'Location experience (2023 - 2024)',
-			description: 'The Location team is responsible for overseeing the Booking.com maps experience, serving as a cross-functional unit that collaborates with various teams across the company. By partnering with teams from multiple areas of the business, we help design, develop, and enhance maps and location-based features to deliver seamless and impactful user experiences. Our primary objective is to continuously improve the way users interact with maps, ensuring that they have access to relevant and timely information that enhances their overall experience with the platform.',
+			description: 'Location team is responsible for overseeing the Booking.com maps experience, serving as a cross-functional unit that collaborates with various teams across the company. By partnering with teams from multiple areas of the business, we help design, develop and enhance maps and location-based features to deliver seamless and impactful user experiences. Our primary objective is to continuously improve the way users interact with maps, ensuring that they have access to relevant and timely information that enhances their overall experience with the platform.',
 			imageURL: importImage('booking-com-search-result-map.png'),
 			imageDescription: 'Booking.com Maps preview',
 		},

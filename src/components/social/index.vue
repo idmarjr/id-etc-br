@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { ref } from 'vue';
-	import SectionHeader from '../sectionHeader.vue';
+	import SectionHeader from '../SectionHeader.vue';
 	import SocialItem from './SocialItem.vue';
 
 	const SocialItems = ref([
