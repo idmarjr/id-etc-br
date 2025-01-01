@@ -12,7 +12,7 @@
 		{
 			id: 2,
 			title: 'Linkedin',
-			url: 'https://linkedin.com/idmarjr',
+			url: 'https://linkedin.com/in/idmarjr/',
 		},
 		{
 			id: 3,
