@@ -10,7 +10,7 @@
 		<div class="wrapper">
 			<header class="intro">
 				<p class="higlight">Hello!</p>
-				<p>I'm <strong>Idmar</strong> a product guy with background in UX Design and Front-End development, currently based Brazil.</p>
+				<p>I'm <strong>Idmar</strong>, a product guy with background in UX Design and Front-End development, currently based in Brazil.</p>
 			</header>
 		</div>
 	</section>
