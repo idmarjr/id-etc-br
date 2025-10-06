@@ -16,7 +16,7 @@
 	"devDependencies": {
 		"@babel/types": "^7.26.0",
 		"@types/aos": "^3.0.4",
-		"@vitejs/plugin-vue": "^5.2.0",
+		"@vitejs/plugin-vue": "^6.0.1",
 		"eslint": "^9.37.0",
 		"eslint-plugin-vue": "^9.31.0",
 		"sass": "^1.81.0",
