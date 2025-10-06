@@ -21,6 +21,10 @@ Just another personal website. Feel free to fork, use and/or modify.
 1. `pnpm preview`
 1. Use the newly created `./dist/` folder to deploy
 
+## Google Analytics track
+
+1. Duplicate [googleAnalyticsScript-example.js](googleAnalyticsScript-example.js) and rename it to `googleAnalyticsScript.js`
+1. Update `YOUR-GA-ID` with your Google Analytics ID
 
 ## Special thanks
 
