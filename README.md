@@ -9,6 +9,7 @@ Just another personal website. Feel free to fork, use and/or modify.
 - [Vite](https://vitejs.dev/)
 - [Vue 3](https://vuejs.org/)
 - [Typescript](https://www.typescriptlang.org/)
+- [Vitest](https://vitest.dev/)
 
 ## Setup
 
@@ -20,6 +21,22 @@ Just another personal website. Feel free to fork, use and/or modify.
 1. `pnpm build`
 1. `pnpm preview`
 1. Use the newly created `./dist/` folder to deploy
+
+## Tests
+
+Tests are written with [Vitest](https://vitest.dev/) and [@vue/test-utils](https://test-utils.vuejs.org/).
+
+Run once:
+
+```
+pnpm test
+```
+
+Run in watch mode during development:
+
+```
+pnpm test:watch
+```
 
 ## Google Analytics
 
