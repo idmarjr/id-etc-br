@@ -21,7 +21,7 @@
 	</li>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 	.socialItem {
 		list-style: none;
 	}
@@ -42,9 +42,9 @@
 		text-decoration: underline;
 	}
 
-	////////////////////////////////////////////////////
-	// @media > 810px
-	////////////////////////////////////////////////////
+	/***************************************************/
+	/* @media > 810px */
+	/***************************************************/
 	@media (min-width: 811px) {
 		.socialItem {
 			flex-basis: calc(25% - 12px);

@@ -42,9 +42,6 @@ importers:
       happy-dom:
         specifier: ^20.9.0
         version: 20.9.0
-      sass:
-        specifier: ^1.99.0
-        version: 1.99.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -2157,6 +2154,7 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
+    optional: true
 
   classlist-polyfill@1.2.0: {}
 
@@ -2404,7 +2402,8 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  immutable@5.1.5: {}
+  immutable@5.1.5:
+    optional: true
 
   import-fresh@3.3.1:
     dependencies:
@@ -2617,7 +2616,8 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  readdirp@4.1.2: {}
+  readdirp@4.1.2:
+    optional: true
 
   resolve-from@4.0.0: {}
 
@@ -2649,6 +2649,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
+    optional: true
 
   semver@7.7.3: {}
 
