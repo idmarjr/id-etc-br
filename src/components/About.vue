@@ -16,7 +16,7 @@
 	</section>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 	.intro {
 		padding: 64px 0;
 		letter-spacing: 0.03em;
@@ -34,9 +34,6 @@
 		font-weight: 100;
 	}
 
-	////////////////////////////////////////////////////
-	// @media > 810px
-	////////////////////////////////////////////////////
 	@media (min-width: 811px) {
 		.intro {
 			padding-top: 48px;

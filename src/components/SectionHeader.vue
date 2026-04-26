@@ -15,7 +15,7 @@
 	</header>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 	.sectionHeader {
 		margin-bottom: 36px;
 	}
@@ -43,9 +43,6 @@
 		z-index: 1;
 	}
 
-	////////////////////////////////////////////////////
-	// @media > 810px
-	////////////////////////////////////////////////////
 	@media (min-width: 811px) {
 		.sectionHeader {
 			margin-bottom: 48px;

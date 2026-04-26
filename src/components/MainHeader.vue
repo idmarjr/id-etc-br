@@ -26,7 +26,7 @@
 	</header>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 	.mainHeader {
 		padding-top: 64px;
 	}

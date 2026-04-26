@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'ac-css-reset/dist/ac-css-reset.css'
-import './assets/globals.scss'
+import './assets/globals.css'
 
 import AOS from "aos"
 import 'aos/dist/aos.css'

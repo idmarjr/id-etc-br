@@ -46,14 +46,11 @@
 	</section>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 	#social {
 		margin-bottom: 64px;
 	}
 
-	////////////////////////////////////////////////////
-	// @media > 810px
-	////////////////////////////////////////////////////
 	@media (min-width: 811px) {
 		.socialList {
 			display: flex;
