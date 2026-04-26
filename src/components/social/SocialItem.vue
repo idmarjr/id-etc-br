@@ -42,6 +42,9 @@
 		text-decoration: underline;
 	}
 
+	/***************************************************/
+	/* @media > 810px */
+	/***************************************************/
 	@media (min-width: 811px) {
 		.socialItem {
 			flex-basis: calc(25% - 12px);
