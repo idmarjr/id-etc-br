@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+/// <reference types="vitest" />
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import { readFileSync, existsSync } from 'fs'
 import { resolve } from 'path'
@@ -24,5 +25,9 @@ function injectGoogleAnalytics() {
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [vue(), injectGoogleAnalytics()],
-	base: './'
+	base: './',
+	test: {
+		environment: 'happy-dom',
+		globals: true,
+	}
 })
